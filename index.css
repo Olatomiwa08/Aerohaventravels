@@ -18,12 +18,15 @@ body{
     width: 100%;
     flex-direction: column;
 }
-.container .heropage{
+.container .herobg{
     background: url(/assets/images/herobg.jpg);
     width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.container .heropage{
+    
     /* background-attachment: fixed; */
     min-height: 100vh;
     height: 100%;
@@ -33,7 +36,7 @@ body{
     align-items: center;
     width: 100%;
 }
-.heropage header{
+ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,12 +74,12 @@ header.sticky .logo img{
 header.sticky:before {
     opacity: 1;
 } */
-.heropage header .logo{
+header .logo{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.heropage header .logo img{
+header .logo img{
     max-width: 100px;
     max-height: 140.78px;
     width: 100%;
@@ -356,7 +359,7 @@ header nav ul li a{
 
 .adventure{
     background: #fff;
-    padding: 200px 140px 64px 0px;
+    padding: 200px 80px 64px;
 }
 .adventure .planeicon{
     display: flex;
@@ -371,12 +374,13 @@ header nav ul li a{
 .adventurecontent .adventureimg{
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    align-items: flex-start;
 }
 .adventurecontent .adventureimg img{
     width: 502px;
     height: 460px;
+    position: relative;
 }
 
 .adventurecontent .adventuretextwrapper{
@@ -434,13 +438,13 @@ header nav ul li a{
 .managment{
     background: rgba(217, 217, 217, 0.20);
     width: 100%;
+    padding: 54px  80px;
 }
 .managementgrid{
     display: flex;
     align-items: center;
     width: 100%;
     gap: 32px;
-    padding-block: 54px  70px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -484,6 +488,440 @@ header nav ul li a{
 }
 
 
+.placescontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 70px;
+    gap: 120px;
+}
+.placescontainer .placesheadtext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-direction: column;
+}
+.placescontainer .placesheadtext h4{
+    color: #007BFF;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.placescontainer .placesheadtext h2{
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px;
+}
+.placesgrid{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.placesgridbox{
+    width: 100%;
+    max-width: 342px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 28px;
+    position: relative;
+    /* box-shadow: 0px 17px 38px rgba(0, 0, 0, 0.04); */
+    /* justify-content: flex-start; */
+    align-items: center;
+}
+.placesgridbox .viewtour{
+    display: flex;
+    width: 135.66px;
+    height: 41px;
+    padding: 12px 32px 12px 32px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #007BFF;
+    background:  rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.20);
+}
+.placesgridbox .viewtour  a{
+    text-align: center; 
+    text-decoration: none;
+    color: #007BFF; font-size: 15px;
+    font-weight: 500;
+    line-height: 27px; 
+    white-space: nowrap;
+}
+.placesgridbox .card{
+    min-height: 585px;
+    box-shadow: 0px 17px 38px rgba(0, 0, 0, 0.04);
+    background: #fff;
+}
+.placesgridbox .card .cardbody{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* overflow: hidden; */
+}
+.cardbody .tag{
+    width: 100%;
+    max-width: 154px; 
+    height: 44px;
+    /* height: 100%; */
+    left: 10px; top: -10px; 
+    position: absolute; 
+    background: #007BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+/* Other styles remain unchanged */
+
+.tag {
+    width: 153.37px;
+    height: 44px;
+    left: 10px;
+    top: -10px;
+    position: absolute;
+    background: #007BFF;
+    display: flex;
+    align-items: center;
+}
+
+.before,
+.after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+}
+
+.before {
+    border-width: 10.06px 10.06px 0 0;
+    border-color:  transparent #C7390D transparent transparent;
+    left: -10px;
+    top: 0;
+}
+
+
+.after {
+    border-width: 10.06px 0 0 10.06px;
+    border-color: transparent transparent transparent #C7390D;
+    right: -10px;
+    top: 0;
+}
+.cardbody .tag h4{
+    color: white; 
+    font-size: 20.11px; 
+    font-weight: 500; 
+    line-height: 32.69px;
+}
+
+.placesgridbox .card .cardbody .cardtext{
+    /* width: 256px; 
+    height: 92px;  */
+    padding: 25px 34px 42px; 
+}
+.placesgridbox .card .cardbody .cardtext p{
+    /* width: 256px; 
+    height: 92px;  */
+    color: #646464; 
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 26px; 
+}
+.placesgridbox .card .cardbody .cardimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.cardimg .imgname{
+    position: absolute; 
+    text-align: center; 
+    color: white; 
+    font-size: 36px; 
+    font-weight: 600; 
+    text-transform: capitalize; 
+    line-height: 24px; 
+    /* z-index: 300; */
+    top: 130px;
+}
+/* .cardbody .cardtext */
+
+.service {
+    width: 100%;
+}
+.service .servicecontainer{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.servicecontainer .serviceheadtext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.serviceheadtext h4{
+    color: #007BFF;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.serviceheadtext h2{
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 688px;
+}
+.serviceheadtext p{
+    color: #646464;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    display: flex;
+    max-width: 612.52px;
+    justify-content: center;
+}
+.servicecontainer .packages{
+    width: 100%;
+}
+.servicecontainer .packages .videopopup{
+    width: 100%;
+}
+.packages .videopopup img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.packagegrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 32px;
+    column-gap: 16px;
+    padding: 70px 70px 0;
+    max-height: 500px;
+}
+.packagegridbox{
+    position: relative;
+    bottom: 240px;
+    display: flex;
+    max-width: 362px;
+    min-height: 234px;
+    height: 100%;
+    width: 100%;
+    padding: 18px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 0px 29.006px;
+    background: #FFF;
+    box-shadow: 0px 27.193px 54.386px 0px rgba(0, 0, 0, 0.10);
+}
+.packagegridbox h4{
+    color: #485280;
+    text-align: center;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.packagegridbox p{
+    color: #646464;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+.testimonial{
+    width: 100%;
+}
+.testimonialcontainer{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    background: #007BFF;
+    /* padding-left: 140.8px; */
+    justify-content: flex-end;
+    gap: 151.067px;
+    min-height: 500px;
+    height: 100%;
+}
+.travelerreview{
+    width: 45%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 45px 28px 80px 80px ;
+    /* background: url(/assets/images/testimonial.jpg); */
+    background-repeat: no-repeat;
+    gap: 180px;
+    background: linear-gradient(0deg, rgba(65, 68, 105, 0.50) 0%, rgba(65, 68, 105, 0.50) 100%), url(/assets/images/testimonial.jpg), lightgray 50% / cover no-repeat;
+    box-shadow: 32px 4.267px 85.333px 0 #3939BC;
+    overflow: hidden;
+    /* width: 683.733px; */
+/* height: 669.867px; */
+}
+.reviewtext{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.reviewtext h5{
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 146.2%;
+}
+.reviewtext h2{
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.reviewtext h2 span{
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: #485280;
+    white-space: nowrap;
+}
+.reviewtext p{
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.reviewbtn button{
+    border-radius: 16px;
+    background: #007BFF;
+    width: 241px;
+    height: 63px;
+    flex-shrink: 0;
+    border: none;
+    color: #FFF;
+    color: #FFF;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 146.2%; 
+}
+.testimonies{
+    width: 60%;
+}
+.testimony{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+    flex-direction: column;
+}
+.testimonywrapper{
+    background: #FFF;
+    display: flex;
+    height: 128px;
+    /* padding-left: 12.8px; */
+    align-items: flex-start;
+    width: fit-content;
+    max-width: 426px;
+    overflow: hidden;
+}
+.testimonialcontainer .testimonycontent{
+    display: flex;
+    padding: 12.8px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.testimonycontent .feeds{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.testimonycontent .text{
+    align-self: stretch;
+}
+.testimonycontent .text p{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+}
+.testimonycontent .tourist{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.testimonycontent .tourist h5{
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    padding-right: 6.4px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-right: 1.5px solid #000;
+}
+
+.testimonycontent .tourist p{
+    color: #505050;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .destinationcontainer{
     display: flex;
     justify-content: center;
@@ -491,7 +929,7 @@ header nav ul li a{
     flex-direction: column;
     width: 100%;
     background: #fff;
-    padding: 80px ;
+    padding: 70px;
     gap: 120px;
 }
 .destinationcontainer .destinationheadtext{
@@ -522,8 +960,9 @@ header nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 48px;
+    gap: 46px;
     flex-wrap: wrap;
+    padding: 0;
 }
 .destinationgridbox{
     width: 100%;
@@ -537,7 +976,6 @@ header nav ul li a{
     /* box-shadow: 0px 17px 38px rgba(0, 0, 0, 0.04); */
     /* justify-content: flex-start; */
     align-items: center;
-
 }
 .destinationgridbox .viewtour{
     display: flex;
@@ -560,8 +998,8 @@ header nav ul li a{
 }
 .destinationgridbox .card{
     min-height: 585px;
-    box-shadow: 0px 17px 38px rgba(0, 0, 0, 0.04);
-    background: #fff;
+    /* box-shadow: 0px 17px 38px rgba(0, 0, 0, 0.04); */
+    /* background: #fff; */
 }
 .destinationgridbox .card .cardbody{
     position: relative;
@@ -626,18 +1064,77 @@ header nav ul li a{
     font-weight: 500; 
     line-height: 32.69px;
 }
-
-.destinationgridbox .card .cardbody .cardtext{
-    /* width: 256px; 
-    height: 92px;  */
-    padding: 25px 34px 42px; 
+.cardbody .tour{
+    padding: 0 18px;
 }
-.destinationgridbox .card .cardbody .cardtext p{
+.cardbody .tour .tourcontent{
+    border-radius: 0px 0px 32px 32px;
+    background:  #FFF;
+    box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
+    position: relative;
+    bottom: 40px;
+    max-width: 314px;
+    min-height: 380px;
+    height: 100%;
+    flex-shrink: 0;
+    padding: 52px 23px 24px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.tourcontent .tourtext{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.tourtext .tourheading{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.tourtext .tourheading h4.title{
+    color:  #485280;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.tourtext .tourheading .tourlocation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.tourtext .tourheading .tourlocation p{
+    color: #999 !important;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 28.8px; 
+}
+.tourcontent .tourpurpose ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.tourcontent .tourpurpose ul li p , span{
+    color: #B3B3B3;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+.destinationgridbox .card .cardbody .tourtext p{
     /* width: 256px; 
     height: 92px;  */
-    color: #646464; 
-    font-size: 16px; 
-    font-weight: 400; 
+    color: #646464;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 26px; 
 }
 .destinationgridbox .card .cardbody .cardimg{
@@ -657,89 +1154,335 @@ header nav ul li a{
     /* z-index: 300; */
     top: 130px;
 }
-/* .cardbody .cardtext */
 
-.service {
+.quote{
     width: 100%;
+    height: 100%;
 }
-.service .servicecontainer{
-    background: #fff;
+.quote .quotecontent{
+    background: url(/assets/images/quotebg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 54px 0 70px;
+    height: 100%;
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 40px; */
+}
+.quote .quotecontent .quotetext{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
-.servicecontainer .serviceheadtext{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.serviceheadtext h4{
-    color: #007BFF;
+.quotecontent .quotetext h4{
+    color:  #FFF;
     text-align: center;
     font-size: 28px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
+    text-transform: uppercase;
 }
-.serviceheadtext h2{
-    color: rgba(0, 0, 0, 0.80);
+.quotecontent .quotetext p{
+    max-width: 737px;
+    color: #FFF;
     text-align: center;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    max-width: 688px;
-}
-.serviceheadtext p{
-    color: #646464;
-    text-align: center;
+    font-family: Lato;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; 
+    line-height: 26px; 
+}
+.quotecontent button{
     display: flex;
-    width: 612.52px;
+    max-width: 200.125px;
+    max-height: 66.674px;
+    width: 100%;
+    padding: 19.542px 28.288px 20.692px 28.739px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 4.598px;
+    border: 1.15px solid #007BFF;
+    background: #007BFF;
+    box-shadow: 0px 27.589px 41.384px -12.645px rgba(0, 0, 0, 0.09);
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+
+
+.getintouch{
+    width: 100%;
+    padding: 55px 80px 200px;
+}
+.getintouch .getintouchcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 84px;
+}
+.getintouchcontainer .getintouchtextwrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+.getintouchcontainer .getintouchtextwrapper h5{
+    color: #007BFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.getintouchtextwrapper .getintouchtext h2{
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -2px;
+}
+.getintouchtextwrapper .getintouchtext{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.getintouchtextwrapper .getintouchtext p{
+    color: #646464;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+}
+.getintouchtextwrapper button{
+    background: var(--Blue, #007BFF);
+    display: flex;
+    min-width: 143.38px;
+    width: fit-content;
+    min-height: 46px;
+    padding: 15px 29.671px 15px 30px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; 
+}
+.getintouchform {
+    width: 100%;
+}
+.getintouchform form{
+    width: 640px;
+    /* width: min-content !important; */
+    background: #FFF;
+    box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.10);
+    /* width: 100%; */
+    padding: 50px 40px 40px ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.getintouchform form .formtext{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
     justify-content: center;
 }
-.servicecontainer .packages{
+.getintouchform form .formtext h6{
+    color: #007BFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; /* 150% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.getintouchform form .formtext h4{
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 43.2px; /* 120% */
+}
+.getintouchform form .formcontent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* max-width: 673px; */
+}
+.formcontent .inputblock{
+    padding: 5px 0 10px 0;
+    display: flex;
+    gap: 14px;
     width: 100%;
 }
-.servicecontainer .packages .videopopup{
+.formcontent .inputblock .inputs{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
     width: 100%;
 }
-.packages .videopopup img{
-    object-fit: cover;
+.formcontent .inputblock .inputs input{
     width: 100%;
+    height: 50px;
+    padding: 17px 13px 16px 13px;
+    align-items: center;
+    flex-shrink: 0;
+    border: 1px solid #F7F7F7;
+    background: #F7F7F7;
+    outline: 0;
 }
-
-.packagegrid{
-    
+.formcontent .inputblock .inputs textarea{
     width: 100%;
+    max-height: 150px;
+    padding: 17px 13px 16px 13px;
+    align-items: center;
+    flex-shrink: 0;
+    border: 1px solid #F7F7F7;
+    background: #F7F7F7;
+    outline: 0;
 }
-
-.text-container {
-    position: relative;
-    font-size: 24px;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
+.getintouchbtn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
-
-.word {
-    display: inline-block;
+.getintouchform form button{
+    display: flex;
+    width: 100%;
+    max-width: 332.05px;
+    padding: 14px 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 4.3px;
+    background:  #007BFF;
+    box-shadow: 0px 5px 5px 0px rgba(66, 133, 244, 0.30);
+    border: none;
+    cursor: pointer;
+}
+.getintouchform form button p{
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; 
     white-space: nowrap;
-    transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-
-.hidden {
-    transform: translateX(100%);
-    color: transparent;
 }
 
 
+
+footer{
+    width: 100%;
+}
+.footercontainer{
+    background: url(/assets/images/Footerbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 80px;
+    min-height: 440px;
+    gap: 100px;
+}
+.footercontainer .wrapper{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+    gap: 100px;
+}
+.footercontainer .wrapper>*{
+    width: 100%;
+}
+.footercontainer .footercontent{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footercontent .text p{
+    color: #E0E0E0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+.footercontent .sos{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.footercontainer .footermenu{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footermenu h4{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; 
+}
+.footermenu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+.footermenu ul li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.footermenu ul li a{
+    color: #E0E0E0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-decoration: none;
+}
+.footermenu h5{
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 19.2px; 
+}
+.foottext p{
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    font-size: 10.667px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px; /* 180% */
+}
 
 
 
@@ -760,7 +1503,7 @@ header nav ul li a{
 
 .livechat{
     position: fixed;
-    right: 0;
+    right: 5px;
     bottom: 60px;
 }
 .livechat button{
