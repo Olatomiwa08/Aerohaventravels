@@ -40,7 +40,7 @@
     font-weight: 900;
     line-height: normal;
     position: relative;
-    top: 50px;
+    top: 30px;
 }
 .contactinfo .infocontainer{
     display: flex;
@@ -111,6 +111,13 @@
     font-weight: 400;
     line-height: 26px; 
     text-decoration: none;
+}
+.location{
+    display: flex;
+    gap: 76px;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
 }
 .aboutservice{
     width: 100%;
