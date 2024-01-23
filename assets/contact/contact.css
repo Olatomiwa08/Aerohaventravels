@@ -1,0 +1,226 @@
+.container .contactbg{
+    background: url(/assets/images/contactbg.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* min-height: 100vh; */
+}
+.container .contactus{
+    
+    /* background-attachment: fixed; */
+
+    /* min-height: 550px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contactus .contactcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:80px 80px 170px 80px;
+    gap: 50px;
+}
+.contactcontainer .contacttext{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.contacttext  h1{
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    position: relative;
+    top: 50px;
+}
+.contactinfo .infocontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 0;
+}
+.contactinfo .infocontainer .infotext p{
+    color: var(--bodytext, #646464);
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    max-width: 845px;
+}
+.contactinfo .infogrid{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.contactinfo .infogrid .infogridbox{
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 23px 23px;
+    box-shadow: 0 27.193px 54.386px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 255px;
+    width: 100%;
+    min-height: 242.8px;
+    height: 100% !important;
+    flex-shrink: 0;
+    gap: 10px;
+}
+.contactinfo .infogrid .infogridbox .gridboximg{
+    display: flex;
+    width: 90px;
+    height: 90px;
+    padding: 32px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 45px;
+    background: #007bff;
+    margin-bottom: 25px;
+}
+.contactinfo .infogrid .infogridbox h3{
+    color: #007BFF;
+    text-align: center;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px; /* 128.571% */
+}
+.contactinfo .infogrid .infogridbox p , p a{
+    color:#1A1A1A;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+    text-decoration: none;
+}
+.aboutservice{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: rgba(217, 217, 217, 0.20);
+    padding: 52px 0;
+}
+.aboutservice .headtext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutservice .headtext h4{
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px; /* 140% */
+}
+.aboutservicegrid {
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: relative;
+    padding: 0 60px;
+    overflow: hidden;
+    gap: 30px;
+    width: 100%;
+}
+.aboutservicegrid  .gridbox {
+    flex-shrink: 0;
+    position: relative;
+    width: 351px;
+    min-height: 585px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 6;
+    /* border: 1px solid rgba(0, 0, 0, 0.02); */
+    background: #FFF;
+    box-shadow: 0px 5.027px 21.113px -14.075px rgba(0, 0, 0, 0.14), 0px 21.271px 42.543px 0px rgba(0, 0, 0, 0.10);
+}
+.aboutservicegrid .gridbox .gridimage{
+    width: 100%;
+    padding: 25px 21px 3px;
+}
+  /* .img {
+    position: relative;
+    width: 309.659px;
+    height: 207px;
+    margin: 25.135px 0 0 21.113px;
+    background: url(./assets/images/0fe6d4b8-d807-40b5-ba3d-5a844563f6fb.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 6;
+    overflow: hidden;
+  } */
+.aboutservicegrid .gridbox .gridtitle h3{
+    color: #007BFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.aboutservicegrid .gridbox .gridtext {
+    padding: 0 43px 45px;
+}
+.aboutservicegrid .gridbox .gridtext p{
+    color: #646464;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+
+.gridindicator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+}
+.gridindicator span.indicate.active {
+    flex-shrink: 0;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #007bff;
+    z-index: 24;
+    border-radius: 5px;
+}
+.gridindicator span.indicate {
+    flex-shrink: 0;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 25;
+    border-radius: 5px;
+}

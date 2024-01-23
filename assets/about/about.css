@@ -4,11 +4,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 .container .aboutus{
     
     /* background-attachment: fixed; */
-    min-height: 100vh;
+
     /* min-height: 550px; */
     height: 100%;
     display: flex;
@@ -181,13 +182,259 @@ header nav ul li a{
     max-width: 263px; 
     width: 100%;
     height: 430px; 
+    /* height: 100%; */
     position: relative; 
     background: white;
     border-radius: 0px 0px 23px 23px;
     background: #FFF;
     box-shadow: 0px 21.271px 42.543px 0px rgba(0, 0, 0, 0.10); 
-    border-top-left-radius: 23px; 
-    border-top-right-radius: 23px
+}
+.gridbox .boxicon{
+    width: 84px; 
+    height: 84px; 
+    left: 90px; 
+    top: -35px; 
+    position: absolute; 
+    background: rgb(255, 255, 255); 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gridbox .boxtitle{
+    width: calc(100% + 8px);
+    /* width: 271px;  */
+    height: 80px; 
+    left: -8px; 
+    position: relative; 
+    background: #007BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+.boxtitle h4{
+    color: #FFF;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; 
+}
+.gridbox .boxtitle .titlebefore{
+    width:0; 
+    height:0; 
+    left: -0px; 
+    top: -8px; 
+    position: absolute; 
+    border-style: solid;
+    border-width: 9px 9px 0 0;
+    border-color:  transparent #C7390D transparent transparent;
+}
+.gridbox .boxtext{
+    padding: 30px 37px 44px 37px;
+    position: relative; 
+    /* word-wrap: break-word" */
+}
+.boxtext p{
+    text-align: center; 
+    color: #646464; 
+    font-size: 16px; 
+    font-family: "Lato", sans-serif;
+    font-weight: 400; 
+    line-height: 26px; 
 }
 
+.booknexttrip{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.booknexttrip .booknexttripbg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.booknexttripbg img{
+    width: 100%;
+}
+.booknexttrip .booknexttripcontent{
+    width: 100%;
+    display: flex;
+    align-items: last baseline;
+    gap: 60px;
+    padding: 0 80px;
+}
+.booknexttripcontent .contentimg {
+    position: relative;
+    bottom: 80px;
+}
+.booknexttripcontent .contentimg img{
+    width: 568px;
+    height: 486px;
+}
+.booknexttripcontent .contenttext{
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    width: 100%;
+    position: relative;
+    bottom: 80px;
+}
+.booknexttripcontent .contenttext .text{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.booknexttripcontent .contenttext .text h3{
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px; 
+}
+.booknexttripcontent .contenttext .text p{
+    color: #999;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+}
+.booknexttripcontent .contenttext button{
+    display: flex;
+    width: fit-content;
+    height: 31px;
+    padding: 8px 14.691px 7.715px 14px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 2.658px;
+    border: 0.665px solid #007BFF;
+    background: #007BFF;
+    box-shadow: 0px 15.95px 23.925px -7.31px rgba(0, 0, 0, 0.09);
+}
+.booknexttripcontent .contenttext button a{
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
 
+.aboutservice{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.aboutservice .headtext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutservice .headtext h4{
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px; /* 140% */
+}
+.aboutservicegrid {
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: relative;
+    padding: 0 60px;
+    overflow: hidden;
+    gap: 30px;
+    width: 100%;
+}
+.aboutservicegrid  .gridbox {
+    flex-shrink: 0;
+    position: relative;
+    width: 351px;
+    min-height: 585px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 6;
+    /* border: 1px solid rgba(0, 0, 0, 0.02); */
+    background: #FFF;
+    box-shadow: 0px 5.027px 21.113px -14.075px rgba(0, 0, 0, 0.14), 0px 21.271px 42.543px 0px rgba(0, 0, 0, 0.10);
+}
+.aboutservicegrid .gridbox .gridimage{
+    width: 100%;
+    padding: 25px 21px 3px;
+}
+  /* .img {
+    position: relative;
+    width: 309.659px;
+    height: 207px;
+    margin: 25.135px 0 0 21.113px;
+    background: url(./assets/images/0fe6d4b8-d807-40b5-ba3d-5a844563f6fb.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 6;
+    overflow: hidden;
+  } */
+.aboutservicegrid .gridbox .gridtitle h3{
+    color: #007BFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.aboutservicegrid .gridbox .gridtext {
+    padding: 0 43px 45px;
+}
+.aboutservicegrid .gridbox .gridtext p{
+    color: #646464;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+
+.gridindicator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+}
+.gridindicator span.indicate.active {
+    flex-shrink: 0;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #007bff;
+    z-index: 24;
+    border-radius: 5px;
+}
+.gridindicator span.indicate {
+    flex-shrink: 0;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 25;
+    border-radius: 5px;
+}
+  
