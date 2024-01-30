@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .container .contactbg{
     background: url(/assets/images/contactbg.jpg);
     width: 100%;
@@ -117,7 +122,72 @@
     gap: 76px;
     align-items: center;
     justify-content: center;
-    padding: 80px 0;
+    /* justify-content: space-between; */
+    padding: 80px;
+    width: 100%;
+}
+.location .locationmap{
+    width: 100%;
+}
+.location .message{
+    width: 100%;
+}
+.message form .formcontent{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 100%;
+}
+.message form .formcontent .forminputs{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+.formcontent .forminputs input{
+    display: flex;
+    max-width: 450px;
+    width: 100%;
+    height: 52px;
+    padding: 15px 12px 16px 12px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+    background:#FFF;
+    outline: none;
+}
+.formcontent .forminputs textarea{
+    max-width: 444px;
+    width: 100%;
+    height: 171.5px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+    background: #FFF;
+    padding: 15px 12px 16px 12px;
+    outline: none;
+}
+.formcontent button{
+    display: flex;
+    max-width: 215px;
+    width: 100%;
+    height: 58px;
+    padding: 16px 48px 16px 48px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #007BFF;
+    background: #007BFF;
+    box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 26px; /* 162.5% */
 }
 .aboutservice{
     width: 100%;

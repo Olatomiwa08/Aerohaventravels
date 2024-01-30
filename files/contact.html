@@ -73,12 +73,15 @@
         </section>
         <section class="location">
             <div class="locationmap">
-                <img src="/assets/images/contactmap.png" alt="">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31699.113839299847!2d3.4012762499999996!3d6.7222691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b956dadb7636d%3A0xa9c53fea48c7f03c!2sRestoration%20Ave%2C%20Pakuro%20121101%2C%20Ogun%20State!5e0!3m2!1sen!2sng!4v1706530758491!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <img src="/assets/images/contactmap.png" alt=""> -->
             </div>
             <div class="message">
-                <form action="#">
+                <form  method="POST" id="form">
                     <div class="formcontent">
                         <div class="forminputs">
+                            <input type="hidden" name="access_key" value="b6757260-ebaf-4132-b234-bb3f043c6f4a">
+
                             <input type="text" name="name" id="name" placeholder="Your Name">
                             <input type="email" name="emailaddress" id="email" placeholder="Your Email">
                             <input type="text" name="subject" id="subject" placeholder="Subject">
@@ -87,6 +90,7 @@
                         <div class="formbtn">
                             <button>Send Message</button>
                         </div>
+                        <div id="result"></div>
                     </div>
                 </form>
             </div>
@@ -244,5 +248,49 @@
             </div>
         </footer>
     </div>
+
+
+    <script>
+
+
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait..."
+
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = json.message;
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function() {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 3000);
+                });
+        });
+    </script>
 </body>
 </html>

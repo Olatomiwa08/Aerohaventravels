@@ -1,3 +1,18 @@
+$(document).ready(function () {
+    $(".tabrole").click(function () {
+      // Remove 'active' class from all tabs and panels
+      $(".tabrole").removeClass("active");
+      $(".panel").removeClass("active");
+  
+      // Add 'active' class to the clicked tab
+      $(this).addClass("active");
+  
+      // Get the corresponding panel ID and show it
+      var panelId = $(this).attr("aria-controls");
+      $("#" + panelId).addClass("active");
+    });
+  });
+
 // window.onscroll = function() {
 //     stickyHeader();
 // };

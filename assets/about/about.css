@@ -1,10 +1,12 @@
 .container .aboutusbg{
     background: url(/assets/images/aboutusbg.jpg);
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/assets/images/aboutusbg.jpg), lightgray 0px -2.4px / 100% 130.327% no-repeat; */
     width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
+    position: relative;
 }
 .container .aboutus{
     
@@ -24,10 +26,10 @@
     align-items: center;
     padding-inline: 80px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-    z-index: 1000;
     width: 100%;
+    z-index: 1000 !important;
 }
-header:before {
+/* header:before {
     content: '';
     position: absolute;
     top: 0;
@@ -38,7 +40,7 @@ header:before {
     z-index: -1;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
+} */
 
 /* header.sticky {
     position: fixed;
@@ -74,6 +76,7 @@ header nav ul{
     align-items: center;
     list-style: none;
     gap: 34px;
+    z-index: 100;
 }
 header nav ul li{
     display: flex;
@@ -95,6 +98,7 @@ header nav ul li a{
     line-height: normal;
     letter-spacing: .2px;
     text-transform: uppercase;
+    z-index: 1000;
 }
 .aboutus .aboutuscontainer{
     display: flex;
@@ -103,6 +107,21 @@ header nav ul li a{
     align-items: center;
     padding:80px 80px 170px 80px;
     gap: 50px;
+
+}
+.aboutusbg .filter{
+    background: rgba(0, 123, 255, 0.40);
+    background-blend-mode: color;
+    max-width: 290px;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    /* height: 550px; */
+    height: 100%;
+    top: 0;
+    left: 35%;
+    /* left: 80px; */
+
 }
 .aboutuscontainer .aboutustext{
     display: flex;
@@ -110,6 +129,7 @@ header nav ul li a{
     gap: 30px;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 .aboutustext  h1{
     color: #FFF;
@@ -274,6 +294,9 @@ header nav ul li a{
 .booknexttripcontent .contentimg img{
     width: 568px;
     height: 486px;
+    border: 13.653px solid #FFF;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    box-shadow: 0px 9.102px 20.934px -7.281px rgba(0, 0, 0, 0.11), 0px 21.271px 42.543px 0px rgba(0, 0, 0, 0.10);
 }
 .booknexttripcontent .contenttext{
     display: flex;
@@ -349,14 +372,15 @@ header nav ul li a{
 .aboutservicegrid {
     display: flex;
     align-items: first baseline;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: nowrap;
     position: relative;
     padding: 0 60px;
-    overflow: hidden;
-    gap: 30px;
-    width: 100%;
+    /* overflow: hidden; */
+    gap: 33px;
+    /* width: 100%; */
 }
+
 .aboutservicegrid  .gridbox {
     flex-shrink: 0;
     position: relative;
@@ -375,6 +399,10 @@ header nav ul li a{
 .aboutservicegrid .gridbox .gridimage{
     width: 100%;
     padding: 25px 21px 3px;
+}
+
+.gridbox .gridimage img{
+    width: 100%;
 }
   /* .img {
     position: relative;

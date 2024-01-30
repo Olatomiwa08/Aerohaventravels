@@ -4,8 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Lato', sans-serif; */
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 body{
     position: relative;
@@ -35,17 +35,18 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    
 }
  header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 80px;
+    padding-inline: 20px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease; 
     z-index: 1000;
     width: 100%;
 }
-header:before {
+/* header:before {
     content: '';
     position: absolute;
     top: 0;
@@ -56,7 +57,7 @@ header:before {
     z-index: -1;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
+} */
 
 /* header.sticky {
     position: fixed;
@@ -86,8 +87,11 @@ header .logo img{
     height: 100%;
     flex-shrink: 0;
 }
-header nav ul{
+.burger{
     display: flex;
+}
+header nav ul{
+    display: none;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -116,10 +120,10 @@ header nav ul li a{
 }
 .heropage .heropagecontainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding:0 80px 80px 80px;
+    padding:0 20px 80px 20px;
     gap: 50px;
 }
 .heropagecontainer .heropagetext{
@@ -203,6 +207,9 @@ header nav ul li a{
     gap: 24px;
     justify-content: end;
 }
+.heropage .herotoursearch{
+    padding: 0 40px;
+}
 .heropage .searchtour{
     border-radius: 14px 14px 0px 0px;
     background: #FFF;
@@ -211,6 +218,7 @@ header nav ul li a{
     width: 100%;
     position: relative;
     top: 90px;
+    margin: auto;
 }
 .searchtour .searchtourtabs{
     display: flex;
@@ -234,37 +242,63 @@ header nav ul li a{
 }
 .searchtourtabs .tabs .tablist .tabrole{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     border: none;
     width: fit-content;
     cursor: pointer;
     background: none;
     /* padding: 0px 15px 0px 15px; */
+    /* color: rgba(72, 82, 128, 0.60);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    gap: 4px; */
+}
+.searchtourtabs .tabs .tablist .tabrole p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    /* padding: 0px 15px 0px 15px; */
     color: rgba(72, 82, 128, 0.60);
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    display: flex;
     gap: 4px;
+    position: relative;
+    top: 2px;
 }
 .panel {
-    /* Add any styles you need for each panel */
-    display: none; /* Hide all panels by default */
+    display: none; 
 }
 
 .panel.active {
-    /* Show the active panel */
     display: block;
+
 }
-.searchtourtabs .tabs .tablist .tabrole.active{
+.searchtourtabs .tabs .tablist .tabrole.active p{
     color: #007BFF;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
-.searchtourtabs .tabs .tablist .tabrole.active::after{
+.searchtourtabs .tabs .tablist .tabrole svg{
+    fill:#485280;
+    fill-opacity: 0.6;
+    position: relative;
+    top: 2px;
+}
+.searchtourtabs .tabs .tablist .tabrole.active svg{
+    fill: #007BFF;
+    fill-opacity: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.searchtourtabs .tabs .tablist .tabrole.active p::after{
     display: block;
     content: "";
     background: #007BFF;
@@ -279,6 +313,7 @@ header nav ul li a{
     justify-content: space-between;
     gap: 24px;
     align-items: center;
+    flex-direction: column;
 }
 .searchtour .searchcontent{
     border-radius: 8px;
@@ -288,14 +323,17 @@ header nav ul li a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4px;
+    gap: 12px;
     padding: 12px 8px;
+    flex-wrap: wrap;
 }
+
 .searchcontent .searches .searchdiv{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
+    width: 100%;
 }
 .vertdivider{
     width: 0.699px;
@@ -304,11 +342,13 @@ header nav ul li a{
     flex-shrink: 0;
     border: 0.699px solid rgba(0, 0, 0, 0.20);
     opacity: 0.3;
+    display: none;
 }
 .searchdiv .content {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
 }
 .searchdiv .content h4{
     color: #007BFF;
@@ -317,6 +357,7 @@ header nav ul li a{
     font-weight: 600;
     line-height: 12px;
     opacity: 1;
+    text-transform: uppercase;
 }
 .searchdiv .content input,select{
     color: rgba(153, 153, 153, 0.90);
@@ -324,12 +365,17 @@ header nav ul li a{
     font-weight: 400;
     line-height: 13.972px; /* 117.647% */
     letter-spacing: -0.154px;
-    padding: 4px 8px;
+    padding: 4px 8px 4px 0;
     outline: none;
-    max-width: 150px;
+    /* max-width: 150px; */
+    width: 100%;
     border: none;
 }
 
+.searchdiv .content select{
+    min-width: 120px;
+    width: 100%;
+}
 .searchdiv .content input::placeholder{
     font-size: 12px;
     color: rgba(153, 153, 153, 0.60);
@@ -359,7 +405,7 @@ header nav ul li a{
 
 .adventure{
     background: #fff;
-    padding: 200px 80px 64px;
+    padding: 200px 20px 64px;
 }
 .adventure .planeicon{
     display: flex;
@@ -370,6 +416,8 @@ header nav ul li a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 78px;
+    flex-direction: column;
 }
 .adventurecontent .adventureimg{
     width: 100%;
@@ -378,8 +426,10 @@ header nav ul li a{
     align-items: flex-start;
 }
 .adventurecontent .adventureimg img{
-    width: 502px;
-    height: 460px;
+    width: 100%;
+    height: 100%;
+    max-width: 502px;
+    max-height: 460px;
     position: relative;
 }
 
@@ -719,7 +769,13 @@ header nav ul li a{
     object-fit: cover;
     width: 100%;
 }
-
+.servicegridcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 .packagegrid{
     display: flex;
     justify-content: center;
@@ -728,12 +784,12 @@ header nav ul li a{
     width: 100%;
     row-gap: 32px;
     column-gap: 16px;
-    padding: 70px 70px 0;
-    max-height: 500px;
+    padding: 70px 70px 70px;
+    max-height: 100%;
+    height: 100%;
+
 }
 .packagegridbox{
-    position: relative;
-    bottom: 240px;
     display: flex;
     max-width: 362px;
     min-height: 234px;
@@ -777,19 +833,23 @@ header nav ul li a{
     gap: 151.067px;
     min-height: 500px;
     height: 100%;
+    flex-direction: column;
 }
 .travelerreview{
-    width: 45%;
+    width: 100%;
+    max-width:525px;
     height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 45px 28px 80px 80px ;
+    padding: 45px 28px 80px 28px ;
     /* background: url(/assets/images/testimonial.jpg); */
     background-repeat: no-repeat;
-    gap: 180px;
+    gap: 140px;
     background: linear-gradient(0deg, rgba(65, 68, 105, 0.50) 0%, rgba(65, 68, 105, 0.50) 100%), url(/assets/images/testimonial.jpg), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
     box-shadow: 32px 4.267px 85.333px 0 #3939BC;
     overflow: hidden;
     /* width: 683.733px; */
@@ -848,7 +908,7 @@ header nav ul li a{
     line-height: 146.2%; 
 }
 .testimonies{
-    width: 60%;
+    width: 90%;
 }
 .testimony{
     display: flex;
@@ -1164,14 +1224,14 @@ header nav ul li a{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 54px 0 70px;
+    padding: 54px 20px 70px;
     height: 100%;
     min-height: 370px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* gap: 40px; */
+    gap: 40px;
 }
 .quote .quotecontent .quotetext{
     display: flex;
@@ -1223,13 +1283,14 @@ header nav ul li a{
 
 .getintouch{
     width: 100%;
-    padding: 55px 80px 200px;
+    padding: 55px 20px 200px;
 }
 .getintouch .getintouchcontainer{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 84px;
+    flex-direction: column;
 }
 .getintouchcontainer .getintouchtextwrapper{
     display: flex;
@@ -1288,7 +1349,8 @@ header nav ul li a{
     width: 100%;
 }
 .getintouchform form{
-    width: 640px;
+    max-width: 640px;
+    width: 100% !important;
     /* width: min-content !important; */
     background: #FFF;
     box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.10);
@@ -1334,6 +1396,7 @@ header nav ul li a{
     display: flex;
     gap: 14px;
     width: 100%;
+    flex-direction: column;
 }
 .formcontent .inputblock .inputs{
     display: flex;
@@ -1402,10 +1465,12 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 64px 80px;
+    /* justify-content: center; */
+    /* padding: 0 64px 80px 10px; */
+    padding-block: 3px 10px;
+    padding-inline: 80px;
     min-height: 440px;
-    gap: 100px;
+    gap: 70px;
 }
 .footercontainer .wrapper{
     width: 100%;
@@ -1413,12 +1478,15 @@ footer{
 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-
-    gap: 100px;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* flex-wrap: wrap; */
+    gap: 40px;
 }
 .footercontainer .wrapper>*{
     width: 100%;
+    padding-top: 64px;
 }
 .footercontainer .footercontent{
     display: flex;
@@ -1436,11 +1504,14 @@ footer{
     display: flex;
     align-items: center;
     gap: 16px;
+    justify-content: center;
 }
 .footercontainer .footermenu{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    border-left: none;
+    padding:64px 0 30px 16px;
 }
 .footermenu h4{
     color: #FFF;
@@ -1454,6 +1525,10 @@ footer{
     flex-direction: column;
     gap: 10px;
     list-style: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+
 }
 .footermenu ul li {
     display: flex;
@@ -1487,10 +1562,180 @@ footer{
 
 
 
+@media (max-width:600px){
+    .searchcontent .searches{
+        width: 100%;
+    }
+}
+@media (min-width: 768px){
+    header{
+       
+        padding-inline: 80px;
+        
+    }
+    .heropage .heropagecontainer{
 
+        padding:0 80px 80px 80px;
+
+    }
+    .burger{
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 34px;
+    }
+    .heropage .heropagecontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding:0 80px 80px 80px;
+        gap: 50px;
+    }
+    .searchtourtabs .tabs  .panel form{
+        /* border-radius: 8px;
+        border: 9px solid rgba(0, 0, 0, 0.20);
+        opacity: 0.3; */
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: center;
+        flex-direction: row;
+    }
+    .searchcontent .searches{
+        width:max-content;
+    }
+    .searchtour .searchcontent{
+        border-radius: 8px;
+        border: 0.6px solid rgba(0, 0, 0, 0.20);
+        min-height: 65px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 12px 8px;
+        flex-wrap: wrap;
+    }
+    .vertdivider{
+        width: 0.699px;
+        height: 100%;
+        min-height: 50px;
+        flex-shrink: 0;
+        border: 0.699px solid rgba(0, 0, 0, 0.20);
+        opacity: 0.3;
+        display: flex;
+    }
+    .searchdiv .content input,select{
+        color: rgba(153, 153, 153, 0.90);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 13.972px; /* 117.647% */
+        letter-spacing: -0.154px;
+        padding: 4px 8px 4px 0;
+        outline: none;
+        max-width: 150px;
+        border: none;
+    }
+    
+    .searchdiv .content select{
+        min-width: 120px;
+    }
+    .adventure{
+        background: #fff;
+        padding: 200px 80px 64px;
+    }
+    .adventure .adventurecontent{
+        flex-direction: row;
+    }
+
+    .servicegridcontent{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .packagegrid{
+        position: relative;
+        /* bottom: 240px; */
+        padding: 70px 70px 0;
+        bottom: 180px;
+    }
+
+
+    .testimonialcontainer{
+        flex-direction: row;
+    }
+    .travelerreview{
+        padding: 45px 28px 80px 80px ;
+        
+    }
+    .testimonies{
+        width: 60%;
+    }
+
+
+    .quote .quotecontent{
+        padding: 54px 20px 70px;
+    }
+    
+    .getintouch{
+        width: 100%;
+        padding: 55px 80px 200px;
+    }
+    .getintouch .getintouchcontainer{
+        flex-direction: row;
+        
+    }
+    .formcontent .inputblock{
+        flex-direction: row;
+    }
+
+
+    .footercontainer .wrapper{
+        align-items: first baseline;
+        flex-direction: row;
+        text-align: left;
+        gap: 100px;
+    }
+    .footercontainer .footermenu{
+        border-left: .7px solid #DEE2E6;
+        text-align: left;
+    }
+    .footermenu ul{
+        justify-content: left;
+        align-items: first baseline;
+        text-align: left !important;
+    }
+}
+@media (min-width: 834px){
+    .servicegridcontent{
+        
+    }
+    
+}
+@media (min-width: 1024px){
+    .servicegridcontent{
+        /* max-height: 500px; */
+    }
+}
+@media (min-width: 1600px){
+    .servicegridcontent{
+     
+    }
+    .getintouchform form{
+        width: 640px;
+        width: 100% !important;
+      
+    }
+}
 
 
 @media (max-width: 768px) {
+
     .managementgrid{
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
