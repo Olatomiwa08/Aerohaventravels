@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aerohaven About</title>
-    <link rel="stylesheet" href="/assets/about/about.css">
+    <link rel="stylesheet" href="/assets/css/about.css">
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -46,20 +48,24 @@
 <body>
     <div class="container">
         <div class="aboutusbg">
-            <header >
+
+            <header id="header">
                 <div class="logo">
                     <img src="/assets/images/Logo.svg" alt="logo">
                 </div>
     
                 <nav>
-                    <ul >
+                    <div class="burger"><i id="menubar" class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+                    <ul id="menu">
                         <li><a href="/">Home</a></li>
                         <li class="active"><a href="/files/about.html">About </a></li>
-                        <li><a href="/files/tour.html">Tour</a></li>
+                        <li><a href="/files/tour.html">Tour</a><i class="fa-solid fa-chevron-down"></i></li>
                         <li><a href="/files/contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </header>
+            <div id="placeholder"></div>
+            
             <div class="filter"></div>
             <div class="aboutus">
                 <div class="aboutuscontainer">
@@ -344,7 +350,7 @@
         </footer>
     </div>
 
-
+    <script src="/index.js"></script>
     <script>
        $(document).ready(function(){
             $('#imageCarousel').slick({

@@ -1,3 +1,9 @@
+.container{
+    width: 100%;
+}
+.container section{
+    width: 100%;
+}
 .container .toursbg{
     background: url(/assets/images/toursbg.jpg);
     width: 100%;
@@ -31,7 +37,8 @@
     position: absolute;
     left: 0;
     top: 152px;
-    width: 1121px;
+    max-width: 1121px;
+    width: 100%;
     height: 226px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.08) 114.04%);
     box-shadow: 15.242px 15.242px 53.347px 0px rgba(0, 0, 0, 0.60);
@@ -224,6 +231,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 80px;
+    flex-direction: column;
 }
 .description .descriptioncontent .descriptiontext{
     display: flex;
@@ -369,6 +378,7 @@
     justify-content: center;
     align-items: center;
     padding: 80px 80px 0;
+    width: 100%;
 }
 .largemap iframe {
     width: 100%;
@@ -395,4 +405,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18.146px; /* 113.413% */
+}
+
+
+
+@media (min-width:768px) {
+    .description .descriptioncontent{
+
+        flex-direction: row;
+    }
+    
 }

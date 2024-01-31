@@ -37,76 +37,106 @@ body{
     width: 100%;
     
 }
- header{
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 20px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-    z-index: 1000;
+    /* transition: background-color 0.3s ease, box-shadow 0.3s ease;  */
+    transition: background-color .5s ease;
+    z-index: 3000;
     width: 100%;
+    position: relative;
+    /* color: red !important; */
 }
-/* header:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff; 
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-} */
 
-/* header.sticky {
+.sticky{
     position: fixed;
+    width: 100%;
     top: 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2500px);    /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5)); */
 }
-header.sticky .logo img{
-    width: 100%;
-    height: 100%;
-    max-width: 70px !important;
-    max-height: 100px !important;
+#placeholder {
+    position: absolute;
+    height: 80px;
+    z-index: 0;
 }
 
-header.sticky:before {
-    opacity: 1;
-} */
 header .logo{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: fit-content;
+    z-index: 1;
 }
 header .logo img{
-    max-width: 100px;
-    max-height: 140.78px;
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
+    /* max-width: 100px; */
+    /* max-height: 140.78px; */
+    /* width: clamp(40px,.5vh,100px); */
+    width: clamp(40px, 50%, 100px);
+    /* width: 100%; */
+    /* height: 100%; */
 }
 .burger{
     display: flex;
+    z-index: 1;
+}
+.burger i{
+    font-size: 20px;
+    z-index: 1;
+}
+#menubar {
+    font-size: 24px;
+    transition: transform 0.3s ease; 
+}
+
+#menubar.fa-xmark {
+    transform: rotate(180deg);
 }
 header nav ul{
-    display: none;
-    justify-content: center;
+    /* display: none; */
+    display: flex;
+    position: fixed;
+    justify-content:first baseline;
     align-items: center;
     list-style: none;
-    gap: 34px;
+    flex-direction: column;
+    gap: 34px !important;
+    left: 0;
+    top:0;
+    width: 100%;
+    z-index: 0;
+    padding-top: 80px;
+    /* background: hsla(0,0%,100%,.7); */
+    background-color: black;
+    height: 100%;
+    transition: transform .3s ease;
+    transform: translateX(-200%);
+}
+ul.show{
+    transform: translateX(0);
 }
 header nav ul li{
     display: flex;
+    align-items: center;
+    gap: 8px;
+}
+header nav ul li i{
+    color: #ffffff;
+    cursor: pointer;
 }
 header nav ul li.active a{
     display: flex;
-    color:  #007BFF;
+    color:  #007BFF !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+header nav ul li.active i{
+    color:  #007BFF !important;
 }
 header nav ul li a{
     text-decoration: none;
@@ -132,27 +162,36 @@ header nav ul li a{
     gap: 36px;
     align-items: flex-start;
     justify-content: space-between;
+    width: 100%;
 }
 .heropagetext .description h1{
     color: #FFF;
-    font-size: 52px;
+    /* font-size: 52px; */
+    font-size: clamp(20px,5.5vw,52px);
     font-style: normal;
     font-weight: 800;
-    line-height: 62px; 
+    /* line-height: 62px;  */
+    line-height: clamp(32px,8.5vw,62px);
+    font-family: 'Poppins', sans-serif;
 }
 .heropagetext .description h1 .blue{
     color: #007BFF;
-    font-size: 52px;
+    /* font-size: 52px; */
+    font-size: clamp(20px,5.5vw,52px);
     font-style: normal;
     font-weight: 800;
-    line-height: 62px;
+    line-height: clamp(32px,8.5vw,62px);
+    /* line-height: 62px; */
+    font-family: 'Poppins', sans-serif;
 }
 .heropagetext .description p{
     color: #FFF;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: clamp(12px,2.5vw,16px);
     font-style: normal;
     font-weight: 400;
     line-height: 26px; 
+    line-height: clamp(16px,4.5vw,26px);
 }
 .heropagetext .more{
     display: flex;
@@ -195,11 +234,81 @@ header nav ul li a{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
 }
 .heropageslider .slider{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.heropageslider .slider .heroimage{
+    width: 574.76px;
+    height: 560.23px; 
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.heroimage .heroimage_1{
+   max-width: 323.72px; 
+   max-height: 396.39px;
+   height: 100%; 
+   width: 100%;
+   left: 0px; 
+   top: 0px; 
+   position: absolute; 
+   background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); 
+   border-radius: 52.85px; 
+   border: 13.21px white solid;
+   z-index: 1;
+}
+.heroimage .heroimage_2{
+    max-width: 264.26px; 
+    max-height: 264.26px; 
+    right: 0;
+    width: 100%;
+    height: 100%; 
+    top: 44.92px; 
+    position: absolute; 
+    background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); 
+    border-top-left-radius: 52.85px; 
+    border-top-right-radius: 52.85px; 
+    border-bottom-right-radius: 52.85px; 
+    border-bottom-left-radius: 21.14px; 
+    border: 13.21px white solid;
+}
+.heroimage .heroimage_3{
+    max-width: 191.59px; 
+    max-height: 175.73px; 
+    width: 100%;
+    height: 100%;
+    left: 0; 
+    bottom: 0; 
+    position: absolute; 
+    background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); 
+    border-top-left-radius: 52.85px; 
+    border-top-right-radius: 21.14px; 
+    border-bottom-right-radius: 52.85px; 
+    border-bottom-left-radius: 52.85px; 
+    border: 13.21px white solid;
+}
+.heroimage .heroimage_4{
+    max-width: 396.39px; 
+    max-height: 264.26px; 
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    /* object-fit:contain; */
+    right: 0; 
+
+    bottom: 0; 
+    position: absolute; 
+    background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%); 
+    border-top-left-radius: 21.14px; 
+    border-top-right-radius: 52.85px; 
+    border-bottom-right-radius: 52.85px; 
+    border-bottom-left-radius: 52.85px; 
+    border: 13.21px white solid;
 }
 .heropageslider .socials{
     display: flex;
@@ -209,6 +318,7 @@ header nav ul li a{
 }
 .heropage .herotoursearch{
     padding: 0 40px;
+    width: 100%;
 }
 .heropage .searchtour{
     border-radius: 14px 14px 0px 0px;
@@ -248,13 +358,7 @@ header nav ul li a{
     width: fit-content;
     cursor: pointer;
     background: none;
-    /* padding: 0px 15px 0px 15px; */
-    /* color: rgba(72, 82, 128, 0.60);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    gap: 4px; */
+    
 }
 .searchtourtabs .tabs .tablist .tabrole p{
     display: flex;
@@ -319,7 +423,7 @@ header nav ul li a{
     border-radius: 8px;
     border: 0.6px solid rgba(0, 0, 0, 0.20);
     min-height: 65px;
-    width: 100%;
+    width: 100% !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -388,6 +492,7 @@ header nav ul li a{
 .searchtour .searchbutton button{
     border-radius: 8px;
     height: 65px;
+    
     /* height: 100% !important; */
     width: 100%;
     background: #007BFF;
@@ -454,14 +559,16 @@ header nav ul li a{
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 54px; /* 180% */
+    line-height: 54px; 
+    font-family: 'Poppins', sans-serif;
 }
 .adventuretextwrapper .adventuretext .welctext h2{
     color:  rgba(0, 0, 0, 0.80);
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
-    line-height: 50px; /* 125% */
+    line-height: 50px; 
+    font-family: 'Poppins', sans-serif;
 }
 .adventuretextwrapper button{
     display: flex;
@@ -488,7 +595,7 @@ header nav ul li a{
 .managment{
     background: rgba(217, 217, 217, 0.20);
     width: 100%;
-    padding: 54px  80px;
+    padding: 54px 20px;
 }
 .managementgrid{
     display: flex;
@@ -526,7 +633,8 @@ header nav ul li a{
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
-    line-height: 31px; /* 147.619% */
+    line-height: 31px;
+    font-family: 'Poppins', sans-serif;
 }
 .managementgridbox p{
     color: #646464;
@@ -537,7 +645,9 @@ header nav ul li a{
     line-height: 26px; /* 162.5% */
 }
 
-
+.places{
+    width: 100%;
+}
 .placescontainer{
     display: flex;
     justify-content: center;
@@ -545,7 +655,7 @@ header nav ul li a{
     flex-direction: column;
     width: 100%;
     background: #fff;
-    padding: 70px;
+    padding: 70px 20px;
     gap: 120px;
 }
 .placescontainer .placesheadtext{
@@ -562,6 +672,7 @@ header nav ul li a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-family: 'Poppins', sans-serif;
 }
 .placescontainer .placesheadtext h2{
     color: rgba(0, 0, 0, 0.80);
@@ -570,6 +681,7 @@ header nav ul li a{
     font-style: normal;
     font-weight: 600;
     line-height: 56px;
+    font-family: 'Poppins', sans-serif;
 }
 .placesgrid{
     width: 100%;
@@ -679,6 +791,7 @@ header nav ul li a{
     font-size: 20.11px; 
     font-weight: 500; 
     line-height: 32.69px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .placesgridbox .card .cardbody .cardtext{
@@ -699,6 +812,9 @@ header nav ul li a{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.placesgridbox .card .cardbody .cardimg img{
+    width: 100%;
 }
 .cardimg .imgname{
     position: absolute; 
@@ -723,6 +839,7 @@ header nav ul li a{
     justify-content: center;
     align-items: center;
     width: 100%;
+    gap: 30px;
 }
 .servicecontainer .serviceheadtext{
     display: flex;
@@ -730,23 +847,28 @@ header nav ul li a{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding: 0 20px;
 }
 .serviceheadtext h4{
     color: #007BFF;
     text-align: center;
-    font-size: 28px;
+    /* font-size: 28px; */
+    font-size: clamp(20px,2.5vw,28px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-family: 'Poppins', sans-serif;
 }
 .serviceheadtext h2{
     color: rgba(0, 0, 0, 0.80);
     text-align: center;
     font-size: 28px;
+    font-size: clamp(18px,2.5vw,28px);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     max-width: 688px;
+    font-family: 'Poppins', sans-serif;
 }
 .serviceheadtext p{
     color: #646464;
@@ -784,7 +906,7 @@ header nav ul li a{
     width: 100%;
     row-gap: 32px;
     column-gap: 16px;
-    padding: 70px 70px 70px;
+    padding: 70px 20px 70px;
     max-height: 100%;
     height: 100%;
 
@@ -809,6 +931,7 @@ header nav ul li a{
     font-size: 19px;
     font-style: normal;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     line-height: normal;
 }
 .packagegridbox p{
@@ -868,6 +991,7 @@ header nav ul li a{
     font-style: normal;
     font-weight: 500;
     line-height: 146.2%;
+    font-family: 'Poppins', sans-serif;
 }
 .reviewtext h2{
     color: #000;
@@ -875,6 +999,7 @@ header nav ul li a{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    font-family: 'Poppins', sans-serif;
 }
 .reviewtext h2 span{
     color: #FFF;
@@ -884,6 +1009,7 @@ header nav ul li a{
     line-height: normal;
     background: #485280;
     white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
 }
 .reviewtext p{
     color: #FFF;
@@ -917,6 +1043,7 @@ header nav ul li a{
     gap: 36px;
     flex-direction: column;
 }
+
 .testimonywrapper{
     background: #FFF;
     display: flex;
@@ -970,6 +1097,7 @@ header nav ul li a{
     align-items: center;
     gap: 8px;
     border-right: 1.5px solid #000;
+    font-family: 'Poppins', sans-serif;
 }
 
 .testimonycontent .tourist p{
@@ -982,6 +1110,9 @@ header nav ul li a{
     justify-content: center;
     align-items: center;
 }
+.destination{
+    width: 100%;
+}
 .destinationcontainer{
     display: flex;
     justify-content: center;
@@ -989,7 +1120,7 @@ header nav ul li a{
     flex-direction: column;
     width: 100%;
     background: #fff;
-    padding: 70px;
+    padding: 20px;
     gap: 120px;
 }
 .destinationcontainer .destinationheadtext{
@@ -1159,6 +1290,7 @@ header nav ul li a{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    font-family: 'Poppins', sans-serif;
 }
 .tourtext .tourheading .tourlocation {
     display: flex;
@@ -1202,6 +1334,9 @@ header nav ul li a{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.destinationgridbox .card .cardbody .cardimg img{
+    width: 100%;
 }
 .cardimg .imgname{
     position: absolute; 
@@ -1247,6 +1382,7 @@ header nav ul li a{
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }
 .quotecontent .quotetext p{
     max-width: 737px;
@@ -1306,6 +1442,7 @@ header nav ul li a{
     line-height: 27px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }
 .getintouchtextwrapper .getintouchtext h2{
     color: rgba(0, 0, 0, 0.80);
@@ -1314,6 +1451,7 @@ header nav ul li a{
     font-weight: 600;
     line-height: normal;
     letter-spacing: -2px;
+    font-family: 'Poppins', sans-serif;
 }
 .getintouchtextwrapper .getintouchtext{
     display: flex;
@@ -1376,6 +1514,7 @@ header nav ul li a{
     line-height: 27px; /* 150% */
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }
 .getintouchform form .formtext h4{
     color: rgba(0, 0, 0, 0.80);
@@ -1384,6 +1523,7 @@ header nav ul li a{
     font-style: normal;
     font-weight: 600;
     line-height: 43.2px; /* 120% */
+    font-family: 'Poppins', sans-serif;
 }
 .getintouchform form .formcontent{
     display: flex;
@@ -1566,12 +1706,45 @@ footer{
     .searchcontent .searches{
         width: 100%;
     }
+   
+}
+@media (min-width:600px){
+    header .logo img{
+        max-width: 100px;
+        width: clamp(60px, 20%, 100px);
+    }
+    .testimony .testimonywrapper:nth-child(1){
+        position: relative; 
+        left: 13px;
+    }
+    .testimony .testimonywrapper:nth-child(2){
+        position: relative; 
+        left: 45px;
+    }
+    .managment{
+       
+        padding: 54px  80px;
+    }
+    .placescontainer{
+        padding: 70px 70px;
+    }
+    .packagegrid{
+        padding: 70px 70px 70px;
+    }
+    .destinationcontainer{
+        padding: 70px;
+    }
+   
 }
 @media (min-width: 768px){
     header{
        
         padding-inline: 80px;
         
+    }
+    header .logo img{
+        max-width: 100px;
+        width: clamp(80px, 20%, 100px);
     }
     .heropage .heropagecontainer{
 
@@ -1583,11 +1756,22 @@ footer{
     }
     header nav ul{
         display: flex;
-        justify-content: center;
+        justify-content: center !important;
         align-items: center;
         list-style: none;
-        gap: 34px;
+        gap: 34px !important;
+        flex-direction: row;
+        position: relative;
+        top: unset;
+        background: none;
+        padding-top: 0;
+        width: 100%;
+        /* background: hsla(0,0%,100%,.7); */
+        height: 100%;
+        transition: transform 3s ease;
+        transform: translateX(0);
     }
+  
     .heropage .heropagecontainer{
         display: flex;
         flex-direction: row;
@@ -1595,6 +1779,9 @@ footer{
         align-items: center;
         padding:0 80px 80px 80px;
         gap: 50px;
+    }
+    .heropage .herotoursearch{
+        padding: 0 0;
     }
     .searchtourtabs .tabs  .panel form{
         /* border-radius: 8px;
@@ -1619,7 +1806,7 @@ footer{
         justify-content: space-between;
         gap: 8px;
         padding: 12px 8px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     .vertdivider{
         width: 0.699px;

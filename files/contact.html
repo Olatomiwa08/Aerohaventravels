@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aerohaven Contact</title>
     <link rel="stylesheet" href="/index.css">
-    <link rel="stylesheet" href="/assets/contact/contact.css">
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
     <div class="container">
         <div class="contactbg">
-            <header >
+
+            <header id="header">
                 <div class="logo">
                     <img src="/assets/images/Logo.svg" alt="logo">
                 </div>
     
                 <nav>
-                    <ul >
+                    <div class="burger"><i id="menubar" class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+                    <ul id="menu">
                         <li><a href="/">Home</a></li>
                         <li><a href="/files/about.html">About </a></li>
-                        <li><a href="/files/tour.html">Tour</a></li>
-                        <li  class="active"><a href="/files/contact.html">Contact</a></li>
+                        <li><a href="/files/tour.html">Tour</a><i class="fa-solid fa-chevron-down"></i></li>
+                        <li class="active"><a href="/files/contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </header>
+            <div id="placeholder"></div>
+           
             <div class="contactus">
                 <div class="contactcontainer">
                     <div class="contacttext">
@@ -80,7 +86,7 @@
                 <form  method="POST" id="form">
                     <div class="formcontent">
                         <div class="forminputs">
-                            <input type="hidden" name="access_key" value="b6757260-ebaf-4132-b234-bb3f043c6f4a">
+                            <input type="hidden" name="access_key" value="9ebcd4e4-a824-406e-8b91-c4121ca7b4ad">
 
                             <input type="text" name="name" id="name" placeholder="Your Name">
                             <input type="email" name="emailaddress" id="email" placeholder="Your Email">
@@ -248,49 +254,13 @@
             </div>
         </footer>
     </div>
-
+    <script src="/index.js"></script>
+    <script src="/assets/js/contact.js"></script>
 
     <script>
 
 
-        const form = document.getElementById('form');
-        const result = document.getElementById('result');
-
-        form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-        result.innerHTML = "Please wait..."
-
-            fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
-                })
-                .then(async (response) => {
-                    let json = await response.json();
-                    if (response.status == 200) {
-                        result.innerHTML = json.message;
-                    } else {
-                        console.log(response);
-                        result.innerHTML = json.message;
-                    }
-                })
-                .catch(error => {
-                    console.log(error);
-                    result.innerHTML = "Something went wrong!";
-                })
-                .then(function() {
-                    form.reset();
-                    setTimeout(() => {
-                        result.style.display = "none";
-                    }, 3000);
-                });
-        });
+   
     </script>
 </body>
 </html>
