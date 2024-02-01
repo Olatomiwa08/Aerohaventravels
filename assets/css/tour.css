@@ -1,3 +1,6 @@
+*{
+    opacity: 1;
+}
 .container{
     width: 100%;
 }
@@ -14,9 +17,6 @@
     position: relative;
 }
 .container .tours{
-    
-    /* background-attachment: fixed; */
-
     /* min-height: 550px; */
     height: 100%;
     display: flex;
@@ -33,7 +33,11 @@
     padding:80px 80px 170px 80px;
     gap: 50px;
 }
-.tourscontainer .filter{
+.tourmenufilter .tourmenu p a{
+    color: #000 !important;
+    /* display: none; */
+}
+/* .tourscontainer .filter{
     position: absolute;
     left: 0;
     top: 152px;
@@ -42,7 +46,7 @@
     height: 226px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.08) 114.04%);
     box-shadow: 15.242px 15.242px 53.347px 0px rgba(0, 0, 0, 0.60);
-}
+} */
 .tourscontainer .tourstext{
     display: flex;
     flex-direction: column;
@@ -127,7 +131,7 @@
     font-size: 6px;
     font-style: normal;
     font-weight: 600;
-    line-height: 10.938px; /* 184.615% */
+    line-height: 10.938px; 
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -164,16 +168,17 @@
     font-size: 7px;
     font-style: normal;
     font-weight: 400;
-    line-height: 10.208px; /* 160% */
+    line-height: 10.208px;
 }
 .tourgallery .gallery{
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     width: 100%;
     gap: 12px;
     position: absolute;
     bottom: 0;
+    display: none;
     /* height: 100%; */
 }
 .gallery .imgbox{
@@ -187,42 +192,42 @@
     /* height: 100%; */
 }
 
-        .gallery {
-            display: flex;
-            overflow: hidden;
-        }
+.gallery {
+    display: flex;
+    overflow: hidden;
+}       
 
-        .imgbox {
-            margin: 10px;
-            transition: opacity 0.5s ease-in-out;
-        }
+.imgbox {
+    margin: 10px;
+    transition: opacity 0.5s ease-in-out;
+}        
 
-        .imgbox img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+.imgbox img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}       
 
-        .active {
-            opacity: .5;
-        }
+.gallery .active {
+    opacity: .5;
+}
 
-        .hidden {
-            opacity: 0;
-        }
+.hidden {
+    opacity: 0;
+}       
 
         
-        .selectedimg img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
+.selectedimg img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
-        .selectedimg img.visible {
-            opacity: 1;
-        }
+.selectedimg img.visible {
+    opacity: 1;
+}        
 
 
 
@@ -413,6 +418,10 @@
     .description .descriptioncontent{
 
         flex-direction: row;
+    }
+    .tourgallery .gallery{
+        display: flex;
+     
     }
     
 }

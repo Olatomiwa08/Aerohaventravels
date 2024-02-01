@@ -23,7 +23,23 @@
                     <ul id="menu">
                         <li><a href="/">Home</a></li>
                         <li><a href="/files/about.html">About </a></li>
-                        <li><a href="/files/tour.html">Tour</a><i class="fa-solid fa-chevron-down"></i></li>
+                        <!-- <li><a href="/files/tour.html">Tour</a><i class="fa-solid fa-chevron-down"></i></li> -->
+                        <li class="tourlink">
+                            <div class="dropdown">
+                                <a href="javascript:;">Tour</a> <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="tourmenufilter">
+
+                                <div class="tourmenu">
+                                    <p><a href="/files/tour.html">Maldives Tour</a></p>
+                                    <p><a href="/assets/tour/singapore_tour.html">Singapore Tour</a></p>
+                                    <p><a href="/assets/tour/france_tour.html">France Tour</a></p>
+                                    <p><a href="/assets/tour/dubai_tour.html">Dubai Tour</a></p>
+                                    <p><a href="/assets/tour/uk_tour.html">UK Tour</a></p>
+                                    <p><a href="/assets/tour/kenya_tour.html">Kenya Tour</a></p>
+                                </div>
+                            </div>
+                        </li>
                         <li class="active"><a href="/files/contact.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -86,7 +102,7 @@
                 <form  method="POST" id="form">
                     <div class="formcontent">
                         <div class="forminputs">
-                            <input type="hidden" name="access_key" value="9ebcd4e4-a824-406e-8b91-c4121ca7b4ad">
+                            <input type="hidden" name="access_key" value="b6757260-ebaf-4132-b234-bb3f043c6f4a">
 
                             <input type="text" name="name" id="name" placeholder="Your Name">
                             <input type="email" name="emailaddress" id="email" placeholder="Your Email">

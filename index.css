@@ -54,9 +54,9 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 3000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2500px);    /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5)); */
+    backdrop-filter: blur(2500px);    
 }
 #placeholder {
     position: absolute;
@@ -72,12 +72,7 @@ header .logo{
     z-index: 1;
 }
 header .logo img{
-    /* max-width: 100px; */
-    /* max-height: 140.78px; */
-    /* width: clamp(40px,.5vh,100px); */
     width: clamp(40px, 50%, 100px);
-    /* width: 100%; */
-    /* height: 100%; */
 }
 .burger{
     display: flex;
@@ -95,6 +90,7 @@ header .logo img{
 #menubar.fa-xmark {
     transform: rotate(180deg);
 }
+
 header nav ul{
     /* display: none; */
     display: flex;
@@ -112,6 +108,7 @@ header nav ul{
     /* background: hsla(0,0%,100%,.7); */
     background-color: black;
     height: 100%;
+    min-height: 100vh;
     transition: transform .3s ease;
     transform: translateX(-200%);
 }
@@ -136,7 +133,7 @@ header nav ul li.active a{
     line-height: normal;
 }
 header nav ul li.active i{
-    color:  #007BFF !important;
+    color: #007BFF !important;
 }
 header nav ul li a{
     text-decoration: none;
@@ -148,6 +145,64 @@ header nav ul li a{
     letter-spacing: .2px;
     text-transform: uppercase;
 }
+.tourmenufilter{
+    position:relative;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 3000;
+    /* top: 20px; */
+    /* right: 30px; */
+    /* background: red; */
+    width: 100%;
+    display: none !important;
+}
+ .tourmenu{
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #fff;
+    /* background: linear-gradient(180deg,white 10%, rgba(0, 123, 255,0.7) 90%) ; */
+    padding: 40px;
+    border-radius: 0 0 12px 12px ;
+    position: relative;
+    /* right: 70px !important; */
+    /* top: 0 !important; */
+    /* top: 37px !important; */
+    list-style: none;
+    /* height: 0; */
+    width: 100%;
+    /* width: 0; */
+    
+
+}
+
+.tourmenu a{
+    text-decoration: none;
+    color: #000 !important;
+}
+.tourlink{
+    display: flex;
+    flex-direction: column;
+}
+.tourlink .dropdown{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.tourlink:hover  .tourmenufilter{
+    display: flex !important;
+    /* transition: all 4s ease; */
+    opacity: 1; 
+    transform: translateY(0);
+}
+/* .tourlink:hover i{
+    transform: rotateX(180deg);
+} */
 .heropage .heropagecontainer{
     display: flex;
     flex-direction: column;
@@ -237,7 +292,7 @@ header nav ul li a{
     width: 100%;
 }
 .heropageslider .slider{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -1768,8 +1823,64 @@ footer{
         width: 100%;
         /* background: hsla(0,0%,100%,.7); */
         height: 100%;
+        min-height: fit-content;
         transition: transform 3s ease;
         transform: translateX(0);
+    }
+    .tourmenufilter{
+        position:absolute;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        z-index: 3000;
+        top: 20px;
+        right: 30px;
+        /* background: red; */
+        width: 100%;
+        display: none !important;
+    }
+     .tourmenu{
+    
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+        background: #fff;
+        /* background: linear-gradient(180deg,white 10%, rgba(0, 123, 255,0.7) 90%) ; */
+        padding: 40px;
+        border-radius: 0 0 12px 12px ;
+        position: relative;
+        /* right: 70px !important; */
+        /* top: 0 !important; */
+        top: 37px !important;
+        list-style: none;
+        /* height: 0; */
+        width: 80%;
+        /* width: 0; */
+        
+    
+    }
+    
+    .tourmenu a{
+        text-decoration: none;
+        color: #000 !important;
+    }
+    .tourlink{
+        display: flex;
+        flex-direction: column;
+    }
+    .tourlink .dropdown{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .tourlink:hover  .tourmenufilter{
+        display: flex !important;
+        /* transition: all 4s ease; */
+        opacity: 1; 
+        transform: translateY(0);
     }
   
     .heropage .heropagecontainer{
@@ -1779,6 +1890,11 @@ footer{
         align-items: center;
         padding:0 80px 80px 80px;
         gap: 50px;
+    }
+    .heropageslider .slider{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .heropage .herotoursearch{
         padding: 0 0;

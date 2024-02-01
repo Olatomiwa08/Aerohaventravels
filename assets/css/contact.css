@@ -47,11 +47,15 @@
     position: relative;
     top: 30px;
 }
+.contactinfo{
+    width: 100%;
+}
 .contactinfo .infocontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     gap: 50px;
     padding: 80px 0;
 }
@@ -66,10 +70,12 @@
     max-width: 845px;
 }
 .contactinfo .infogrid{
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 24px;
 }
 .contactinfo .infogrid .infogridbox{
@@ -123,10 +129,15 @@
     align-items: center;
     justify-content: center;
     /* justify-content: space-between; */
-    padding: 80px;
+    padding: 20px;
     width: 100%;
+    flex-direction: column;
 }
 .location .locationmap{
+    width: 100%;
+    /* display: none; */
+}
+.locationmap iframe{
     width: 100%;
 }
 .location .message{
@@ -300,4 +311,17 @@
     background: rgba(0, 0, 0, 0.1);
     z-index: 25;
     border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .location{
+        padding: 80px;
+        flex-direction: column;
+    }
+}
+@media (min-width: 1024px) {
+    .location{
+        padding: 80px;
+        flex-direction: row;
+    }
 }
