@@ -1025,7 +1025,7 @@ header nav ul li a{
     /* background: url(/assets/images/testimonial.jpg); */
     background-repeat: no-repeat;
     gap: 140px;
-    background: linear-gradient(0deg, rgba(65, 68, 105, 0.50) 0%, rgba(65, 68, 105, 0.50) 100%), url(/assets/images/testimonial.jpg), lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(65, 68, 105, 0.50) 0%, rgba(65, 68, 105, 0.50) 100%), url(./assets/images/testimonial.jpg), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
     /* background-size: contain; */
     box-shadow: 32px 4.267px 85.333px 0 #3939BC;
@@ -1410,7 +1410,7 @@ header nav ul li a{
     height: 100%;
 }
 .quote .quotecontent{
-    background: url(/assets/images/quotebg.jpg);
+    background: url(./assets/images/quotebg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1654,7 +1654,7 @@ footer{
     width: 100%;
 }
 .footercontainer{
-    background: url(/assets/images/Footerbg.jpg);
+    background: url(./assets/images/Footerbg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
