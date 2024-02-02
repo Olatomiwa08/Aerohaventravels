@@ -19,7 +19,7 @@ body{
     flex-direction: column;
 }
 .container .herobg{
-    background: url(./assets/images/herobg.jpg);
+    background: url(../assets/images/herobg.jpg);
     width: 100%;
     background-size: cover;
     background-position: center;
