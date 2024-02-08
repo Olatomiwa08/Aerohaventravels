@@ -5,7 +5,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     position: relative;
 }
 .container .aboutus{
@@ -307,15 +307,21 @@
     flex-wrap: nowrap;
     position: relative;
     padding: 0 60px;
+    background: white;
     /* overflow: hidden; */
     gap: 33px;
     /* width: 100%; */
+    z-index: 0;
 }
-
+.slick-slider{
+    display: flex;
+    width: 100% !important;
+}
 .aboutservicegrid  .gridbox {
     flex-shrink: 0;
     position: relative;
-    width: 351px;
+    /* width: 351px; */
+    width: 100%;
     min-height: 585px;
     display: flex;
     /* justify-content: center; */
@@ -410,6 +416,10 @@
     .aboutus .aboutuscontainer{
         padding:80px 80px 170px;
 
+    }
+    .container .aboutusbg{
+        min-height: 100vh;
+        position: relative;
     }
     .aboutusbg .filter{
 

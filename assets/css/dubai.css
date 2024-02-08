@@ -1,0 +1,9 @@
+.container .toursbg{
+    background: url(/assets/images/dubai_tour.jpeg);
+    width: 100%;
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    min-height: 453px;
+    position: relative;
+}

@@ -35,41 +35,45 @@ document.addEventListener('DOMContentLoaded', function () {
   const headercolor = document.querySelector('header');
   const sections = document.querySelectorAll('section');
   const texts = headercolor.querySelectorAll('nav ul li a');
+  const icon = document.getElementById('menubar');
   
 
-  function updateHeaderColor() {
-    sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        const isInView = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+  // function updateHeaderColor() {
+  //   sections.forEach((section) => {
+  //       const rect = section.getBoundingClientRect();
+  //       const isInView = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
 
-        if (isInView) {
-            if (section.classList.contains('white-bg')) {
-                headercolor.style.backgroundColor = 'transparent';
-                headercolor.style.color = '#485280';
-                texts.forEach(text => {
-                  text.style.color = 'black';
+  //       if (isInView) {
+  //           if (section.classList.contains('white-bg')) {
+  //               headercolor.style.backgroundColor = 'transparent';
+  //               // headercolor.style.color = '#485280';
+  //               texts.forEach(text => {
+  //                 text.style.color = '#485280';
                   
-                });
-            } else if (section.classList.contains('black-bg')) {
-                headercolor.style.backgroundColor = 'transparent';
-                texts.forEach(text => {
-                  text.style.color = 'white';
+  //               });
+  //               icon.style.color = '#485280'
+  //           } else if (section.classList.contains('black-bg')) {
+  //               headercolor.style.backgroundColor = 'transparent';
+  //               texts.forEach(text => {
+  //                 text.style.color = 'white';
                   
-                });
-            }else{
-              texts.forEach(text => {
-                text.style.color = 'white';
+  //               });
+  //               icon.style.color = 'white'
+  //           }else{
+  //             texts.forEach(text => {
+  //               text.style.color = 'white';
                 
-              });
-            }
-        }
-    });
-  }
+  //             });
+  //             icon.style.color = 'white'
+  //           }
+  //       }
+  //   });
+  // }
 
-  window.addEventListener('scroll', updateHeaderColor);
-  window.addEventListener('resize', updateHeaderColor);
+  // window.addEventListener('scroll', updateHeaderColor);
+  // window.addEventListener('resize', updateHeaderColor);
 
-  updateHeaderColor();
+  // updateHeaderColor();
 });
 
 

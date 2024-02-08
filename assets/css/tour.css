@@ -30,14 +30,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding:80px 80px 170px 80px;
+    padding:80px 20px 170px 20px;
     gap: 50px;
 }
 .tourmenufilter .tourmenu p a{
     color: #000 !important;
     /* display: none; */
 }
-/* .tourscontainer .filter{
+.tourscontainer .filter{
     position: absolute;
     left: 0;
     top: 152px;
@@ -46,7 +46,7 @@
     height: 226px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.08) 114.04%);
     box-shadow: 15.242px 15.242px 53.347px 0px rgba(0, 0, 0, 0.60);
-} */
+}
 .tourscontainer .tourstext{
     display: flex;
     flex-direction: column;
@@ -62,9 +62,10 @@
     line-height: normal;
     position: relative;
     top: 50px;
+    text-align: center;
 }
 .description{
-    padding: 0 80px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,7 +312,8 @@
 .descriptionform form .formcontent{
     background: #FFF;
     box-shadow: 0px 30px 61px 0px rgba(0, 0, 0, 0.10);
-    width: 375.45px;
+    max-width: 375.45px;
+    width: 100%;
     padding: 52px;
 }
 .descriptionform form .formcontent .inputblock{
@@ -382,7 +384,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 80px 0;
+    padding: 80px 20px 40px;
     width: 100%;
 }
 .largemap iframe {
@@ -415,13 +417,30 @@
 
 
 @media (min-width:768px) {
+    .toursus .tourscontainer{
+        padding:80px 80px 170px 80px;
+    }
+    .description{
+        padding: 0 80px;
+    }
     .description .descriptioncontent{
 
         flex-direction: row;
     }
+    .descriptionform form .formcontent{
+        min-width: 375.45px;
+        width: 100%;
+    }
     .tourgallery .gallery{
         display: flex;
      
+    }
+    .largemap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 80px 40px;
+        width: 100%;
     }
     
 }

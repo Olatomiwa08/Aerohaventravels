@@ -17,11 +17,13 @@
     <style>
         /* Customize the styling of your slider here */
         .slick-slider {
-            width: 100%;
-            margin: auto;
+            width: 100% !important;
+            margin: 0 -12px;
             display: flex !important;
             gap: 30px !important;
-            display: none ;
+            overflow: hidden;
+            /* padding:0 12px; */
+            /* display: none ; */
         }
 
         .gridbox {
@@ -51,7 +53,9 @@
 
             <header id="header">
                 <div class="logo">
-                    <img src="../assets/images/Logo.svg" alt="logo">
+                    <a href="/">
+                        <img src="../assets/images/Logo.svg" alt="logo">
+                    </a>
                 </div>
     
                 <nav>
@@ -94,7 +98,7 @@
                 
             </div>
         </div>
-        <section class="purpose">
+        <section class="purpose white-bg">
             <div class="purposecontainer">
                 <div class="purposetext">
                     <h5>Welcome to Aerohaven</h5>
@@ -163,8 +167,8 @@
             <div class="headtext">
                 <h4>Our Service</h4>
             </div>
-            <div class=" " style="width: 100%; overflow: hidden;">
-                <div  class="aboutservicegrid slick-slider" id="imageCarousel">
+            <div class=" " >
+                <div class="aboutservicegrid slick-slider" id="imageCarousel">
                     <div class="gridbox">
                         <div class="gridimage">
                             <img src="/assets/images/study_Abroad.jpg" alt="study_Abroad">
@@ -200,7 +204,8 @@
                                 starting from filling up visa
                                 applications to the preparation of
                                 financial statements, guiding and
-                                training for mock interviews.Tour
+                                training for mock interviews.
+                                <!-- Tour
                                 offers visa procurement assistance for
                                 individuals and groups who wish to
                                 travel overseas. We help our clients in
@@ -208,7 +213,7 @@
                                 starting from filling up visa
                                 applications to the preparation of
                                 financial statements, guiding and
-                                training for mock interviews.</p>
+                                training for mock interviews.</p> -->
                         </div>
                     </div>
                     <div class="gridbox">
@@ -373,8 +378,14 @@
                 slidesToShow: 3,     // Set the number of slides to show
                 slidesToScroll: 1,   // Set the number of slides to scroll
                 autoplay: true,
-                dots: true,
+                // dots: true,
                 autoplaySpeed: 2000,
+                dots: false,
+                infinite: true,
+                // speed: 1000,
+                arrows: true,
+                loop: true,
+                adaptiveHeight: true,
                 responsive: [
                 {
                     breakpoint: 768, // Define a breakpoint for screens smaller than 768px
