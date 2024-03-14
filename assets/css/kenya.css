@@ -2,8 +2,9 @@
     background: url(/assets/images/kenya_tour.jpg);
     width: 100%;
     background-size: cover;
-    /* background-position: center; */
+    background-position: center -700px;
     background-repeat: no-repeat;
-    min-height: 453px;
+    background-attachment: fixed;
+    /* min-height: 453px; */
     position: relative;
 }

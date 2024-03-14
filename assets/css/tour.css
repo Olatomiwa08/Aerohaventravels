@@ -145,7 +145,8 @@
     width: 100%;
     height: 100%;
     align-items: center;
-    max-height: 305px;
+    object-fit: cover;
+    max-height: 350px;
 }
 .tourgallery .sellectedimg{
     width: 100%;
@@ -210,7 +211,8 @@
 }       
 
 .gallery .active {
-    opacity: .5;
+    opacity: .7;
+    border: 2px solid white;
 }
 
 .hidden {

@@ -1,9 +1,10 @@
 .container .toursbg{
-    background: url(/assets/images/dubai_tour.jpeg);
+    background: url(/assets/images/dubaitourbg.avif);
     width: 100%;
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     background-repeat: no-repeat;
     min-height: 453px;
     position: relative;
+    background-attachment: fixed;
 }

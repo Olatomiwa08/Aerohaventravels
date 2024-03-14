@@ -6,4 +6,5 @@
     background-repeat: no-repeat;
     min-height: 453px;
     position: relative;
+    background-attachment: fixed;
 }

@@ -331,7 +331,7 @@
     border-radius: 6;
     /* border: 1px solid rgba(0, 0, 0, 0.02); */
     background: #FFF;
-    box-shadow: 0px 5.027px 21.113px -14.075px rgba(0, 0, 0, 0.14), 0px 21.271px 42.543px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 .aboutservicegrid .gridbox .gridimage{
     width: 100%;
