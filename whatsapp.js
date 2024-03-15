@@ -1,9 +1,8 @@
 function openWhatsApp() {
-    var phoneNumber = '+234 814 864 9957'; // Replace with your phone number
+    var phoneNumber = '+234 814 864 9957'; 
     
     var whatsappUrl = 'whatsapp://send?phone=' + phoneNumber;
     
-    // Try to open WhatsApp using the 'whatsapp://' protocol
     var whatsappWindow = window.open(whatsappUrl, '_blank');
 
     setTimeout(function() {
@@ -11,5 +10,5 @@ function openWhatsApp() {
             var webUrl = 'https://web.whatsapp.com/send?phone=' + phoneNumber;
             window.open(webUrl, '_blank');
         }
-    }, 3000);  // Redirect to WhatsApp web after 3 seconds
+    }, 3000); 
 }
