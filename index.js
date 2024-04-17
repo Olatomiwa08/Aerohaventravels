@@ -102,3 +102,16 @@ document.addEventListener('DOMContentLoaded', function () {
 // customDateInput.value = moment().format('DD.MM.YYYY');
 
 
+
+
+
+ScrollReveal().reveal('header', { delay: 100, origin: 'top',distance: '2000px',duration: 1600 });
+ScrollReveal().reveal('.description', { delay: 300, origin: 'left',distance: '2000px',duration: 1600 });
+ScrollReveal().reveal('.heroimage', { delay: 400, origin: 'right',distance: '2000px',duration: 1600 });
+ScrollReveal().reveal('.more', { delay: 500, origin: 'left',distance: '2000px',duration: 1600 });
+// ScrollReveal().reveal('.heroimage', {
+//   rotate: {
+//       x: 20,
+//       z: 20
+//   }
+// });
