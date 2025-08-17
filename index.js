@@ -32,11 +32,19 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 
+
+  document.querySelectorAll("img").forEach(img => {
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", "lazy");
+      }
+    });
   const headercolor = document.querySelector('header');
   const sections = document.querySelectorAll('section');
   const texts = headercolor.querySelectorAll('nav ul li a');
   const icon = document.getElementById('menubar');
   
+
+
 
   // function updateHeaderColor() {
   //   sections.forEach((section) => {
@@ -96,10 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// var customDateInput = document.getElementById('customDateInput');
-    
-//     // Set the default value or use a specific date
-// customDateInput.value = moment().format('DD.MM.YYYY');
+
 
 
 
