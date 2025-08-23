@@ -1,3 +1,7 @@
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.getElementById("header")
   const menubar = document.getElementById("menubar")
@@ -37,7 +41,21 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!img.hasAttribute("loading")) {
         img.setAttribute("loading", "lazy");
       }
-    });
+  });
+
+
+
+
+  // const images = ["/assets/images/backgroun1.jpg", "/assets/images/herobg.jpg", "img3.jpg"];
+  // let index = 0;
+  // const bg = document.querySelector(".herobg");
+
+  // setInterval(() => {
+  //   bg.style.background = `url(${images[index]}) no-repeat center center/cover`;
+  //   index = (index + 1) % images.length;
+  // }, 4000);
+
+
   const headercolor = document.querySelector('header');
   const sections = document.querySelectorAll('section');
   const texts = headercolor.querySelectorAll('nav ul li a');

@@ -2077,7 +2077,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    border-radius: 50px;
+    border-radius: 25px;
     background:  #4DC247;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.40);
     border: none;
