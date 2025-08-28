@@ -23,7 +23,7 @@ body{
     overflow: hidden;
 }
 .container .herobg{
-    background: url(./assets/images/backgroun1.jpg);
+    background: url(./assets/images/background1.jpg);
     /* background: url(./assets/images/herobg.jpg); */
     width: 100%;
     background-size: cover;
@@ -35,8 +35,9 @@ body{
     width: 100%;
     height: 100%;
     /* z-index: -1; */
-    background-color: transparent;
-    background-image: linear-gradient(180deg, #313E6400 0%, #313E64 90%);
+    background-color:  #15151582;
+
+    /* background-image: linear-gradient(180deg, #313E6400 0%, #313E64 90%); */
     opacity: 1;
 }
 /* .container .herobg::after{
@@ -945,6 +946,18 @@ header nav ul li a{
 }
 .placesgridbox .card .cardbody .cardimg img{
     width: 100%;
+    height: 388px;
+    object-fit: cover;
+}
+.placesgridbox .card .cardbody .cardimg::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.50) 100%);
+    z-index: 2;
 }
 .cardimg .imgname{
     position: absolute; 
